@@ -54,7 +54,7 @@ def rutracker_auth():
     if not os.path.exists(fcookie):
         open(fcookie, 'w').close()
 
-    grab = Grab(cookiefile=fcookie, connect_timeout=15, timeout=15)
+    grab = Grab(cookiefile=fcookie, connect_timeout=15, timeout=20)
     url = "{}/login.php".format(RUTRACKER_FORUM)
     grab_go(grab, url)
 
